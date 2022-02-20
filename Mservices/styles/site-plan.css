@@ -3,6 +3,10 @@ Any spaces in your font name should be replaced with a +.
 Fonts are separated by a | */
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+French+Canon+SC|Lato');
 
+/* <style>
+@import url('https://fonts.googleapis.com/css2?family=Arimo&family=Noto+Serif&family=Noto+Serif+Display:wght@300;400&family=PT+Sans&family=Roboto+Serif:wght@100&display=swap');
+</style> */
+
 :root {
   /* change the values below to your colors from your palette */
   --primary-color: #4ABDAC   ;
