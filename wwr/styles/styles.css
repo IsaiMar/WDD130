@@ -51,9 +51,10 @@ h4{
     z-index: -1;
 }
 #hero-msg {
-    grid-column: 2/3;
+    grid-column: 3/4;
     grid-row: 1/2;
     margin-top: 100px;
+    align-items: center;
 }
 #hero-msg h4 {
     color: white;
