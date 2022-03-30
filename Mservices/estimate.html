@@ -6,18 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleaning Services</title>
     <link rel="stylesheet" href="styles/styles-estimate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <div id="content">
         <header>
+            <div id="top">
+                <h>271 S 2nd W, Rexburg, ID 83440</h>
+                <div id="num">
+                    <h>(385)207-CLEAN</h>
+                </div>
+            </div>
             <a id="logo_link" href="index.html">
                 <img class ="logo" src="images/cleaning1.jpg" alt="Cleaning Service Logo">
             </a>
             <nav>
                 <a href="index.html">Home</a>
-                <a href="estimate.html">Free Estimate</a>
+                <a href="estimate.html">Schedule Cleaning</a>
                 <a href="products.html">Our products</a>
                 <a href="contactus.html">Contact Us</a>
+                <div>
+                    <nav id="search"><input type="text" placeholder="Search..">
+                    <button id="lupa" type="submit"><i class="fa2 fa-search"></i></button>
+                </div>
             </nav>
         </header>
         <div id="hero">
@@ -25,7 +36,7 @@
         </div>
         <main class="home-grid">
             <div class="Main-text">
-                <section>
+                <section class="question">
                     <h1>What kind of cleaning do you need?</h1>
                     <label class="container">General Home maid service
                     <input type="radio" checked="checked" name="radio">
@@ -36,9 +47,8 @@
                     <span class="checkmark"></span>
                     </label>
                 </section>
-            <!-- </div> -->
-            <!-- <div> -->
-                <section>
+            
+                <section class="question">
                     <h1>What kind of location is this?</h1>
                     <label class="container">Home/Residence
                     <input type="radio" checked="checked" name="radio1">
@@ -49,9 +59,8 @@
                     <span class="checkmark"></span>
                     </label>
                 </section>
-            <!-- </div>
-            <div> -->
-                <section>
+
+                <section class="question">
                     <h1>What type of cleaning is needed?</h1>
                     <label class="container">General Home maid service
                     <input type="radio" checked="checked" name="radio2">
@@ -74,10 +83,8 @@
                     <span class="checkmark"></span>
                     </label>
                 </section>
-            <!-- </div>
 
-            <div> -->
-                <section>
+                <section class="question">
                         <h1>What is the square footage of the house that needs cleaning?</h1>
                         <label class="container">Small (less than 1500 sq ft)
                         <input type="radio" checked="checked" name="radio3">
@@ -91,6 +98,10 @@
                         <input type="radio" name="radio3">
                         <span class="checkmark"></span>
                 </section>
+
+                <section>
+                <button class="btn submit">Submit</button>
+                </section>
             </div>
         </main>
         <footer>
@@ -98,15 +109,9 @@
             <h3><a href="site-plan.html">Site Plan</a></h3>
             <h3><a href="contactus.html">Contact Us</a></h3>
             <div class="social">
-                <a href="https://facebook.com" target="_blank">
-                    <img src="images/facebook.png" alt="fb icon">
-                </a>
-                <a href="https://twitter.com" target="_blank">
-                    <img src="images/twitter.png" alt="twitter icon">
-                </a>
-                <a href="https://instagram.com" target="_blank">
-                    <img src="images/instagram.png" alt="instagram icon">
-                </a>
+                <a href="https://facebook.com" class="fa fa-facebook"></a>
+                <a href="https://twitter.com" class="fa fa-twitter"></a>
+                <a href="https://instagram.com" class="fa fa-instagram"></a>
             </div>
         </footer>
     </div>
