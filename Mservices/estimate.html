@@ -7,6 +7,86 @@
     <title>Cleaning Services</title>
     <link rel="stylesheet" href="styles/styles-estimate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        form {
+        /* Center the form on the page */
+        margin: 0 auto;
+        width: 400px;
+        /* Form outline */
+        padding: 1em;
+        border: 1px solid #CCC;
+        border-radius: 1em;
+        }
+    
+        ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        }
+    
+        form li + li {
+        margin-top: 1em;
+        }
+    
+        .label1 {
+        /* Uniform size & alignment */
+        display: inline-block;
+        width: 90px;
+        text-align: right;
+        }
+    
+        .box,
+        textarea {
+        /* To make sure that all text fields have the same font settings
+            By default, textareas have a monospace font */
+        font: 1em sans-serif;
+    
+        /* Uniform text field size */
+        width: 300px;
+        box-sizing: border-box;
+    
+        /* Match form field borders */
+        border: 1px solid #999;
+        }
+    
+        .box:focus,
+        textarea:focus {
+        /* Additional highlight for focused elements */
+        border-color: #000;
+        }
+    
+        textarea {
+        /* Align multiline text fields with their labels */
+        vertical-align: top;
+    
+        /* Provide space to type some text */
+        height: 5em;
+        }
+    
+        .button {
+        /* Align buttons with the text fields */
+        padding-left: 90px; /* same size as the label elements */
+        }
+    
+        button {
+        /* This extra margin represent roughly the same space as the space
+            between the labels and their text fields */
+        margin-left: auto;
+        }
+        #feedback {
+        background-color: antiquewhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: .5em;
+        /* make this element invisible until we are ready for it */
+        display: none;       
+        }
+        .moveDown {
+            margin-top: 3em;
+        }
+        </style>
 </head>
 <body>
     <div id="content">
@@ -20,19 +100,20 @@
             <a id="logo_link" href="index.html">
                 <img class ="logo" src="images/cleaning1.jpg" alt="Cleaning Service Logo">
             </a>
-            <nav>
-                <a href="index.html">Home</a>
-                <a href="estimate.html">Schedule Cleaning</a>
-                <a href="products.html">Our products</a>
-                <a href="contactus.html">Contact Us</a>
-                <div>
-                    <nav id="search"><input type="text" placeholder="Search..">
-                    <button id="lupa" type="submit"><i class="fa2 fa-search"></i></button>
+            <div class="header" id="myHeader">
+                <nav id="bar">
+                    <a href="index.html">Home</a>
+                    <a href="estimate.html">Schedule Cleaning</a>
+                    <a href="products.html">Our products</a>
+                    <a href="contactus.html">Contact Us</a>
+                        <nav id="search"><input type="text1" placeholder="Search..">
+                        <button id="lupa" type="submit"><i class="fa2 fa-search"></i></button>
+                        </nav>
+                </nav>
                 </div>
-            </nav>
         </header>
         <div id="hero">
-            <img id="hero-img" src="images/cleaning-crew1.jpg" alt="Cleaning crew">
+            <img id="hero-img" src="images/slide2home.jpg" alt="Cleaning crew">
         </div>
         <main class="home-grid">
             <div class="Main-text">
@@ -99,9 +180,39 @@
                         <span class="checkmark"></span>
                 </section>
 
-                <section>
-                <button class="btn submit">Submit</button>
-                </section>
+                <section class="question">
+                    <h1>Is this an emergency cleaning?</h1>
+                    <label class="container">YES!
+                    <input type="radio" checked="checked" name="radio4">
+                    <span class="checkmark"></span>
+                    </label>
+                    <label class="container">No
+                    <input type="radio" name="radio4">
+                    <span class="checkmark"></span>
+                    </label>
+            </section>
+                <div id="feedback"></div>
+                <div id="infobox">
+                <form action="/my-handling-form-page" method="post">
+                    <ul>
+                        <li>
+                            <label class= label1 for="name">Name:</label>
+                            <input class="box" type="text" id="name" name="user_name">
+                          </li>
+                          <li>
+                            <label class= label1 for="mail">E-mail:</label>
+                            <input class="box" type="email" id="mail" name="user_email">
+                          </li>
+                          <li>
+                            <label class= label1 for="msg">Tell us more about your project:</label>
+                            <textarea id="msg" name="user_message"></textarea>
+                          </li>
+                        <li class="button" >
+                            <button class="btn submit">Submit</button>
+                        </li>
+                    </ul>
+                </form>
+                </div>
             </div>
         </main>
         <footer>
@@ -115,5 +226,36 @@
             </div>
         </footer>
     </div>
+    <script>
+        // get the feedback div element so we can do something with it.
+        const feedbackElement = document.getElementById('feedback');
+        // get the form so we can read what was entered in it.
+        const formElement = document.forms[0];
+        // add a 'listener' to wait for a submission of our form. When that happens run the code below.
+        formElement.addEventListener('submit', function(e) {
+            // stop the form from doing the default action.
+            e.preventDefault();
+            // set the contents of our feedback element to a message letting the user know the form was submitted successfully. Notice that we pull the name that was entered in the form to personalize the message!
+            feedbackElement.innerHTML = 'Hello '+ formElement.user_name.value +'! Thank you for taking our survey. We will get back with your estimate as soon as possible!';
+            // make the feedback element visible.
+            feedbackElement.style.display = "block";
+            // add a class to move everything down so our message doesn't cover it.
+            document.body.classList.toggle('moveDown');
+        });
+    </script>
+        <script>
+            window.onscroll = function() {myFunction()};
+            
+            var header = document.getElementById("myHeader");
+            var sticky = header.offsetTop;
+            
+            function myFunction() {
+              if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+              } else {
+                header.classList.remove("sticky");
+              }
+            }
+            </script>
 </body>
 </html>

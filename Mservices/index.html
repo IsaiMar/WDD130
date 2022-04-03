@@ -20,29 +20,36 @@
             <a id="logo_link" href="index.html">
                 <img class ="logo" src="images/cleaning1.jpg" alt="Cleaning Service Logo">
             </a>
+            <div class="header" id="myHeader">
             <nav id="bar">
                 <a href="index.html">Home</a>
                 <a href="estimate.html">Schedule Cleaning</a>
                 <a href="products.html">Our products</a>
                 <a href="contactus.html">Contact Us</a>
-                <div>
                     <nav id="search"><input type="text" placeholder="Search..">
                     <button id="lupa" type="submit"><i class="fa2 fa-search"></i></button>
-                </div>
+                    </nav>
             </nav>
+            </div>
         </header>
         <div id="hero">
-            <img id="hero-img" src="images/cleaning-crew1.jpg" alt="Cleaning crew">
+            <img id="hero-img" src="images/mservices.png" alt="Cleaning crew">
         </div>
         <main class="home-grid">
                 <div class="Main-text">
-                    <h>QUALITY RESIDENTIAL CLEANING SERVICES</h>
-                    <p>Have you ever had a bad day at work? Maybe your boss screamed at you, or 
-                        you had to deal with some difficult customers or clients. And after work you 
-                        step into your house and feel the dirt in the carpet from not cleaning it in 
-                        weeks, the smell of trash, a sink full of dishes, and don’t get me started in 
-                        the bathroom. Cleaning is a necessary to keep your sanity in your refuge from 
-                        the day to day. <br> <br>
+                    <h1>QUALITY RESIDENTIAL CLEANING SERVICES</h1>
+                    <p>Home is where the heart is. It’s also where everyday dirt and grime lie. House cleaning is an unavoidable part of homeownership
+                         and one that is often hard to fit into a busy schedule. Maintaining a clean home shouldn’t be sacrificed due to a busy schedule. 
+                         Mar services is here to help. <br>We are a total-home cleaning solution that combines reliable and dedicated service with the most advanced 
+                         cleaning tools and technologies for a cleaning unlike any your home has experienced.
+                        <br> <br>
+                        <h2>We provide residential cleaning for:</h2>
+                        <br>
+                        ●   Homes<br>
+                        ●   Apartments<br>
+                        ●   Move-ins and move-outs<br>
+                        ●   Vacation rentals<br>
+                        ●   Post-construction projects <br> <br>
                     
                         Our personalized services let you choose what you want to have cleaned in your 
                         house, what products you want our housekeepers to use, and what fragrance you want 
@@ -59,15 +66,29 @@
                 </section>
         </main>
         <footer>
-            <h3>M services &copy; 2022 - Isai Mar Garcia</h3>
+            <h3>Mar services &copy; 2022 - Isai Mar Garcia</h3>
             <h3><a href="site-plan.html">Site Plan</a></h3>
             <h3><a href="contactus.html">Contact Us</a></h3>
             <div class="social">
-                <a href="https://facebook.com" class="fa fa-facebook"></a>
+                <a href="https://www.facebook.com/YourBestChoiceMS/" class="fa fa-facebook"></a>
                 <a href="https://twitter.com" class="fa fa-twitter"></a>
                 <a href="https://instagram.com" class="fa fa-instagram"></a>
             </div>
         </footer>
     </div>
+    <script>
+        window.onscroll = function() {myFunction()};
+        
+        var header = document.getElementById("myHeader");
+        var sticky = header.offsetTop;
+        
+        function myFunction() {
+          if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+          } else {
+            header.classList.remove("sticky");
+          }
+        }
+        </script>
 </body>
 </html>

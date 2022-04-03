@@ -72,28 +72,30 @@ nav a:hover {
 }
 
 
-
+#hero {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+}
 #hero-img {
+    display: grid;
+    grid-template-columns: auto;
     width: 100%;
     height: 600px;
 }
 
 .home-grid {
     font-family: Helvetica, sans-serif;
+    font-size: 20px;
     color:#264653;
     display: grid;
-    grid-template-columns: 1fr 3fr 2fr;
-    grid-template-rows: 100px 1fr 1fr 50px;
+    grid-template-columns: 0px 200px 100px auto 100px 100px 0px;
+    grid-template-rows: repeat(5, 415px);
+    padding-right: 200px;
+    padding-left: 100px;
+    padding-top: 100px
 }
-.Main-text {
-    height: 500px;
-    grid-column: 2/3;
-    grid-row: 2/4;
-    font-size: 20px;
-}
-.Main-text h {
-    font-size: 25px;
-}
+
 .box{
     display:grid;
     padding-bottom: 50px;
@@ -121,7 +123,7 @@ footer{
     background-color: #DFDCE3; 
     font-family: Verdana;
     padding: 25px 50px;
-    margin-top: 200px; 
+    margin-top: 150px; 
     display: grid;
     justify-content: space-around;
     align-items: center;
@@ -149,16 +151,58 @@ footer a:hover{
     border: none;
     color: white;
     padding: 14px 28px;
-    font-size: 30px;
+    font-size: 15px;
     cursor: pointer;
-    margin-top: 80px;
-    margin-left: 30px;
+    margin-top: 60px;
+    margin-left: 50px;
   }
 
-  .submit {background-color: #2196F3;} /* Blue */
-  .submit:hover {background: #F7B733;}
+  .submit {background-color: #acb9c4;} /* Blue */
+  .submit:hover {background: #f07816;}
 
-
+.products-intro {
+    display: grid;
+    height: 400px;
+    padding-left: 200px;
+    padding-right: 400px;
+    padding-top: 100px;
+    font-size: 22px;
+}
+.products-intro h1{
+    font-family: Helvetica;
+    font-size: 50px;
+}
+.products {
+    width: 300px;
+    height: 300px;
+}
+.r-img {
+    grid-column: 5/7;
+}
+.l-img {
+    grid-column: 1/2;
+}
+.r-pro {
+    grid-column: 4/6;
+}
+.l-pro {
+    grid-column: 4/6;
+}
+.pro1 {
+    grid-row: 1/2;
+}
+.pro2 {
+    grid-row: 2/3;
+}
+.pro3 {
+    grid-row: 3/4;
+}
+.pro4 {
+    grid-row: 4/5;
+}
+.pro5 {
+    grid-row: 5/6;
+}
 
 .fa {
     padding: 20px;
@@ -234,4 +278,8 @@ input[type=text] {
   .header {
     background: rgba(255, 255, 255, 0.836);
     /* color: #f1f1f1; */
+  }
+
+  #error-img {
+      grid-column: 1/2;
   }
